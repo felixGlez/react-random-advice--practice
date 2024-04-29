@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
-import { StyledCard, StyledMain } from './styles';
+import {
+	StyledButton,
+	StyledButtonContainer,
+	StyledCard,
+	StyledMain
+} from './styles';
 
 const Main = () => {
 	const [adviceCounter, setAdviceCounter] = useState(0);
@@ -14,9 +19,10 @@ const Main = () => {
 			<StyledCard>
 				<span>ADVICE #{advice.id}</span>
 				<p>{advice.advice}</p>
-				<button onClick={() => setAdviceCounter(adviceCounter + 1)}>
-					Click
-				</button>
+				<img src='./images/pattern-divider-desktop.svg' />
+				<StyledButtonContainer>
+					<StyledButton onClick={() => setAdviceCounter(adviceCounter + 1)} />
+				</StyledButtonContainer>
 			</StyledCard>
 		</StyledMain>
 	);
